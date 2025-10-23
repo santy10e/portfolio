@@ -31,7 +31,7 @@ body {
 
 /* Tipografía */
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: 350;
     color: var(--text);
 }
 
@@ -41,7 +41,7 @@ h1 span {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -84,8 +84,8 @@ p {
 }
 
 .intro p {
-    font-size: 1.2rem;
-    max-width: 80%;
+    font-size: 1.1rem;
+    max-width: 100%;
 }
 
 /* === Columna Derecha Mi Foto e Info === */
@@ -97,10 +97,10 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background-color: var(--surface);
+    /*background-color: var(--surface);*/
     padding: 2rem;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    /*border-radius: var(--radius);*/
+    /*box-shadow: var(--shadow);*/
     height: fit-content;
 }
 
@@ -110,11 +110,11 @@ p {
     border-radius: 3%;
     object-fit: cover;
     margin-bottom: 1rem;
-    box-shadow: var(--shadow);
+    /*box-shadow: var(--shadow);*/
 }
 
 .profile h3 {
-    font-weight: 600;
+    font-weight: 350;
     color: var(--text);
     margin-bottom: 1rem;
 }

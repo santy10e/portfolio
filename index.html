@@ -104,7 +104,8 @@
                         <div class="project-image"> <img src="img/project5.png" alt="Proyecto 3"> </div>
                         <div class="project-content">
                             <h3><a href="https://github.com/santy10e/SMA_GrupoEstudio" target="_blank"
-                                    style="text-decoration: none; color: inherit;">Sistema multiagente (SMA) para grupos de estudio</a></h3>
+                                    style="text-decoration: none; color: inherit;">Sistema multiagente (SMA) para grupos
+                                    de estudio</a></h3>
                             <p>Código BETA para Sistema multiagente (SMA) que permita a los estudiantes de la
                                 Universidad
                                 Nacional de Loja encontrar y conectarse con compañeros interesados en formar grupos de
@@ -117,7 +118,8 @@
                         <div class="project-image"> <img src="img/project6.jpeg" alt="Proyecto 3"> </div>
                         <div class="project-content">
                             <h3><a href="https://github.com/santy10e/Bib_Running_Detection/tree/main" target="_blank"
-                                    style="text-decoration: none; color: inherit;">Detección de Dorsales de Corredores</a></h3>
+                                    style="text-decoration: none; color: inherit;">Detección de Dorsales de
+                                    Corredores</a></h3>
                             <p>Este proyecto utiliza Streamlit y OpenCV para detectar dorsales de corredores en imágenes
                                 y
                                 videos. La aplicación permite cargar imágenes, videos y también usar la cámara web para
@@ -136,8 +138,8 @@
                     modelo de regresión logística. El objetivo fue optimizar dicho modelo mediante algoritmos basados en
                     gradiente (GD, SGD, MBGD, AdaGrad,Adam y RMSProp) para elevar la precisión en la clasificación de
                     noticias verdaderas y falsas.</p>
-                    <div class="about-img"> <img src="img/published.png" alt="Sobre mí"> </div>
-                    <div class="project-links">
+                <div class="about-img"> <img src="img/published.png" alt="Sobre mí"> </div>
+                <div class="project-links">
                     <a href="pdf/Ingenius_Ecuador_Art.pdf" target="_blank"> Ver Paper (PDF)</a>
                 </div>
 
@@ -252,6 +254,19 @@
 
         // Ejecutar al cargar
         loadGitHubProjects();
+
+        // Registrar visita al cargar la página
+        async function registrarVisita() {
+            try {
+                const res = await fetch("https://portfolio-backend.vercel.app/api/track");
+                const data = await res.json();
+                console.log("✅ Visita registrada:", data);
+            } catch (error) {
+                console.error("❌ Error al registrar visita:", error);
+            }
+        }
+
+        registrarVisita();
     </script>
 
 </body>

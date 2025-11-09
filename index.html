@@ -258,9 +258,11 @@
         // Registrar visita al cargar la página
         async function registrarVisita() {
             try {
-                const res = await fetch("https://portfolio-backend.vercel.app/api/track");
+                const res = await fetch("https://portfolio-backend-six-phi.vercel.app/api/visit");
+                if (!res.ok) throw new Error(`Error HTTP ${res.status}`);
+
                 const data = await res.json();
-                console.log("✅ Visita registrada:", data);
+                console.log("✅ Visita registrada:", data.visit);
             } catch (error) {
                 console.error("❌ Error al registrar visita:", error);
             }
